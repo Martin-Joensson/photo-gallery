@@ -1,4 +1,5 @@
 import { Footer } from "./components/Footer";
+import { Gallery } from "./components/Gallery";
 import { Header } from "./components/Header";
 
 export const App = () => {
@@ -6,6 +7,7 @@ export const App = () => {
     <div className="min-h-screen relative">
       <Header />
       <div className="pb-10">
+        <Gallery />
         {/* 
     Main content section
     */}
