@@ -7,14 +7,12 @@ import { Portrait } from "../pages/Portrait";
 import { Gallery } from "../components/Gallery";
 
 export const CategoryRoutes = () => {
-    let { category } = useParams();
-    
+  let { category } = useParams();
+  console.log(category);
+
   return (
     <Routes>
-      <Route
-        path="/category/:category"
-        element={<Gallery category={category} />}
-      />
+      <Route path="/category/:category" element={<Gallery />} />
       <Route path="/wildlife" element={<Wildlife />} />
       <Route path="/landscape" element={<Landscape />} />
       <Route path="/street" element={<Street />} />
