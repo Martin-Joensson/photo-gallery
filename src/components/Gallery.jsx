@@ -1,5 +1,6 @@
 
-export const Gallery = (category) => {
+export const Gallery = ({ category }) => {
+    console.log(category)
 
     // Return images that correspond to chosen category.
     // Get gallery information fråm JSON?
@@ -8,7 +9,7 @@ export const Gallery = (category) => {
   return (
       <div className=" font-headerFont">
           <h3 className="mt-2 text-3xl">
-          Gallery
+              {category} Gallery
           </h3>
       </div>
       // Map over all images and place in grid. change grid size responsively
