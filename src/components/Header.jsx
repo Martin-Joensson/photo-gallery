@@ -2,9 +2,9 @@ import { NavLink } from "react-router-dom";
 
 export const Header = () => {
   return (
-    <div className="aboslute top-0 border w-full border-red-500">
+    <div className="aboslute top-0 w-full border-red-500">
       <h1 className="font-headerFont text-2xl">Martin Jönsson Photography</h1>
-      <div className="flex flex-col justify-between font-headerFont tablet:flex">
+      <div className="flex flex-col justify-evenly font-headerFont tablet:flex-row">
         <NavLink to="/category/wildlife">
           <h2>WildLife</h2>
         </NavLink>

@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Eurasian Coot",
+    "path": "/wildlife/01.jpg",
+    "alttext": "Placeholder text",
+    "category": ["wildlife", "bird"],
+    "orientation": "landscape"
+  },
+  {
+    "title": "Eurasian Coot",
+    "path": "/wildlife/01.jpg",
+    "alttext": "Placeholder text",
+    "category": ["wildlife"],
+    "orientation": "portrait"
+  }
+]
