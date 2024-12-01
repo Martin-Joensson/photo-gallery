@@ -10,56 +10,56 @@
     "title": "Dandilion",
     "path": "/wildlife/w_02.jpg",
     "alttext": "Placeholder text",
-    "category": ["wildlife","flower"],
+    "category": ["wildlife", "flower"],
     "orientation": "portrait"
   },
   {
-    "title": "Duck",
+    "title": "Mallard",
     "path": "/wildlife/w_03.jpg",
     "alttext": "Placeholder text",
-    "category": ["wildlife","bird"],
+    "category": ["wildlife", "bird"],
     "orientation": "landscape"
   },
   {
     "title": "Splash",
     "path": "/wildlife/w_04.jpg",
     "alttext": "Placeholder text",
-    "category": ["wildlife","bird"],
+    "category": ["wildlife", "bird", "b&W"],
     "orientation": "landscape"
   },
   {
     "title": "Eurasian Coot",
     "path": "/wildlife/w_05.jpg",
     "alttext": "Placeholder text",
-    "category": ["wildlife","bird"],
+    "category": ["wildlife", "bird"],
     "orientation": "portrait"
   },
   {
     "title": "Home",
     "path": "/wildlife/w_06.jpg",
     "alttext": "Placeholder text",
-    "category": ["wildlife","bird"],
+    "category": ["wildlife", "bird", "b&W"],
     "orientation": "portrait"
   },
   {
     "title": "Pair",
     "path": "/wildlife/w_07.jpg",
     "alttext": "Placeholder text",
-    "category": ["wildlife","bird"],
+    "category": ["wildlife", "bird", "b&W"],
     "orientation": "portrait"
   },
   {
     "title": "Sweep",
     "path": "/wildlife/w_08.jpg",
     "alttext": "Placeholder text",
-    "category": ["wildlife","bird"],
+    "category": ["wildlife", "bird", "b&W"],
     "orientation": "portrait"
   },
   {
     "title": "Formation",
     "path": "/wildlife/w_09.jpg",
     "alttext": "Placeholder text",
-    "category": ["wildlife","bird"],
+    "category": ["wildlife", "bird", "b&W"],
     "orientation": "portrait"
   },
   {
@@ -81,6 +81,98 @@
     "path": "/wildlife/w_12.jpg",
     "alttext": "Placeholder text",
     "category": ["wildlife", "flower"],
+    "orientation": "landscape"
+  },
+  {
+    "title": "Graze",
+    "path": "/landscape/l_01.jpg",
+    "alttext": "Placeholder text",
+    "category": ["landscape", "animals", "b&W"],
+    "orientation": "portrait"
+  },
+  {
+    "title": "Watertower",
+    "path": "/landscape/l_02.jpg",
+    "alttext": "Placeholder text",
+    "category": ["landscape", "architecture"],
+    "orientation": "portrait"
+  },
+  {
+    "title": "Lighthouse",
+    "path": "/street/s_01.jpg",
+    "alttext": "Placeholder text",
+    "category": ["street", "b&W"],
+    "orientation": "landscape"
+  },
+  {
+    "title": "Balcony",
+    "path": "/street/s_02.jpg",
+    "alttext": "Placeholder text",
+    "category": ["street", "b&W"],
+    "orientation": "landscape"
+  },
+  {
+    "title": "Relax",
+    "path": "/street/s_03.jpg",
+    "alttext": "Placeholder text",
+    "category": ["street", "b&W"],
+    "orientation": "landscape"
+  },
+  {
+    "title": "Power",
+    "path": "/street/s_04.jpg",
+    "alttext": "Placeholder text",
+    "category": ["street"],
+    "orientation": "landscape"
+  },
+  {
+    "title": "Catch",
+    "path": "/street/s_05.jpg",
+    "alttext": "Placeholder text",
+    "category": ["street", "bird", "b&W"],
+    "orientation": "landscape"
+  },
+  {
+    "title": "Take off",
+    "path": "/street/s_06.jpg",
+    "alttext": "Placeholder text",
+    "category": ["street", "bird", "b&W"],
+    "orientation": "landscape"
+  },
+  {
+    "title": "Patience",
+    "path": "/portrait/p_01.jpg",
+    "alttext": "Placeholder text",
+    "category": ["portrait", "animal"],
+    "orientation": "landscape"
+  },
+  {
+    "title": "Conversation",
+    "path": "/portrait/p_02.jpg",
+    "alttext": "Placeholder text",
+    "category": ["portrait", "b&W"],
+    "orientation": "landscape"
+  },
+  {
+    "title": "Spotted",
+    "path": "/portrait/p_03.jpg",
+    "alttext": "Placeholder text",
+    "category": ["portrait", "b&W"],
+    "orientation": "landscape"
+  },
+  {
+    "title": "Love",
+    "path": "/portrait/p_04.jpg",
+    "alttext": "Placeholder text",
+    "category": ["portrait", "b&W"],
+    "orientation": "landscape"
+  },
+
+  {
+    "title": "Missing",
+    "path": "/portrait/p_05.jpg",
+    "alttext": "Placeholder text",
+    "category": ["portrait", "bird"],
     "orientation": "landscape"
   }
 ]

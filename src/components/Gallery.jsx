@@ -29,10 +29,10 @@ export const Gallery = () => {
     }
   };
 
-  const checkCategory = (image) => {
+  const checkCategory = (image, index) => {
     if (image.category.includes(category)) {
-      return <PhotoCard image={image} />;
-    } else return null;
+      return <PhotoCard image={image} key={index} />;
+    } 
   };
   // Return images that correspond to chosen category.
   // Get gallery information fråm JSON?
@@ -51,7 +51,7 @@ export const Gallery = () => {
           </div>
           <div className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-4">
             {images.map((image, index) => (
-              <div className="object-cover" key={index}>{checkCategory(image)}</div>
+              checkCategory(image, index)
             ))}
           </div>
         </div>
