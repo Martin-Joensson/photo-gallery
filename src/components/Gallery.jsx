@@ -49,9 +49,9 @@ export const Gallery = () => {
           <div className=" font-headerFont">
             <h3 className="mt-2 text-3xl">{galleryTitle} Gallery</h3>
           </div>
-          <div className="flex">
+          <div className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-4">
             {images.map((image, index) => (
-              <div key={index}>{checkCategory(image)}</div>
+              <div className="object-cover" key={index}>{checkCategory(image)}</div>
             ))}
           </div>
         </div>

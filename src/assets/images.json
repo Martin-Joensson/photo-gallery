@@ -1,16 +1,86 @@
 [
   {
     "title": "Eurasian Coot",
-    "path": "/wildlife/01.jpg",
+    "path": "/wildlife/w_01.jpg",
     "alttext": "Placeholder text",
     "category": ["wildlife", "bird"],
     "orientation": "landscape"
   },
   {
-    "title": "Eurasian Coot",
-    "path": "/wildlife/01.jpg",
+    "title": "Dandilion",
+    "path": "/wildlife/w_02.jpg",
     "alttext": "Placeholder text",
-    "category": ["wildlife"],
+    "category": ["wildlife","flower"],
     "orientation": "portrait"
+  },
+  {
+    "title": "Duck",
+    "path": "/wildlife/w_03.jpg",
+    "alttext": "Placeholder text",
+    "category": ["wildlife","bird"],
+    "orientation": "landscape"
+  },
+  {
+    "title": "Splash",
+    "path": "/wildlife/w_04.jpg",
+    "alttext": "Placeholder text",
+    "category": ["wildlife","bird"],
+    "orientation": "landscape"
+  },
+  {
+    "title": "Eurasian Coot",
+    "path": "/wildlife/w_05.jpg",
+    "alttext": "Placeholder text",
+    "category": ["wildlife","bird"],
+    "orientation": "portrait"
+  },
+  {
+    "title": "Home",
+    "path": "/wildlife/w_06.jpg",
+    "alttext": "Placeholder text",
+    "category": ["wildlife","bird"],
+    "orientation": "portrait"
+  },
+  {
+    "title": "Pair",
+    "path": "/wildlife/w_07.jpg",
+    "alttext": "Placeholder text",
+    "category": ["wildlife","bird"],
+    "orientation": "portrait"
+  },
+  {
+    "title": "Sweep",
+    "path": "/wildlife/w_08.jpg",
+    "alttext": "Placeholder text",
+    "category": ["wildlife","bird"],
+    "orientation": "portrait"
+  },
+  {
+    "title": "Formation",
+    "path": "/wildlife/w_09.jpg",
+    "alttext": "Placeholder text",
+    "category": ["wildlife","bird"],
+    "orientation": "portrait"
+  },
+  {
+    "title": "Side eye",
+    "path": "/wildlife/w_10.jpg",
+    "alttext": "Placeholder text",
+    "category": ["wildlife", "bird"],
+    "orientation": "portrait"
+  },
+  {
+    "title": "Longdistance call",
+    "path": "/wildlife/w_11.jpg",
+    "alttext": "Placeholder text",
+    "category": ["wildlife", "frog"],
+    "orientation": "portrait"
+  },
+  {
+    "title": "Dry",
+    "path": "/wildlife/w_12.jpg",
+    "alttext": "Placeholder text",
+    "category": ["wildlife", "flower"],
+    "orientation": "landscape"
   }
 ]
