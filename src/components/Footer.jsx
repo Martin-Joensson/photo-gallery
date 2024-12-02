@@ -1,6 +1,8 @@
 export const Footer = () => {
   return (
-    <div className="absolute w-full bottom-0 border border-green-500">Footer
+    <div className="absolute w-full flex bottom-0 ">
+      
+      <p className="font-headerFont"> All images &copy; Martin Jönsson</p>
     
       {/* contact information */}
     </div>
