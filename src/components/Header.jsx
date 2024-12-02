@@ -17,9 +17,11 @@ const portrait = <FontAwesomeIcon icon={faImagePortrait} />;
 export const Header = () => {
   return (
     <div className="aboslute top-0 w-full border-red-500">
-      <h1 className="font-headerFont my-8 text-2xl">
-        Martin Jönsson Photography
-      </h1>
+      <NavLink to="/">
+        <h1 className="font-headerFont my-8 text-2xl">
+          Martin Jönsson Photography
+        </h1>
+      </NavLink>
       <div className="w-full flex flex-row my-8 justify-evenly font-headerFont">
         <NavLink to="/category/wildlife">
           <h2 className="hidden tablet:flex">WildLife</h2>
