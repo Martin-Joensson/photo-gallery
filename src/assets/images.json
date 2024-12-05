@@ -4,7 +4,7 @@
     "path": "/wildlife/w_01.jpg",
     "alttext": "Placeholder text",
     "category": ["wildlife", "bird"],
-    "orientation": "landscape"
+    "orientation": "portrait"
   },
   {
     "title": "Dandilion",
@@ -39,7 +39,7 @@
     "path": "/wildlife/w_06.jpg",
     "alttext": "Placeholder text",
     "category": ["wildlife", "bird", "b&W"],
-    "orientation": "portrait"
+    "orientation": "landscape"
   },
   {
     "title": "Pair",
@@ -53,14 +53,14 @@
     "path": "/wildlife/w_08.jpg",
     "alttext": "Placeholder text",
     "category": ["wildlife", "bird", "b&W"],
-    "orientation": "portrait"
+    "orientation": "landscape"
   },
   {
     "title": "Formation",
     "path": "/wildlife/w_09.jpg",
     "alttext": "Placeholder text",
     "category": ["wildlife", "bird", "b&W"],
-    "orientation": "portrait"
+    "orientation": "landscape"
   },
   {
     "title": "Side eye",
@@ -102,21 +102,21 @@
     "path": "/street/s_01.jpg",
     "alttext": "Placeholder text",
     "category": ["street", "b&W"],
-    "orientation": "landscape"
+    "orientation": "portrait"
   },
   {
     "title": "Balcony",
     "path": "/street/s_02.jpg",
     "alttext": "Placeholder text",
     "category": ["street", "b&W"],
-    "orientation": "landscape"
+    "orientation": "portrait"
   },
   {
     "title": "Relax",
     "path": "/street/s_03.jpg",
     "alttext": "Placeholder text",
     "category": ["street", "b&W"],
-    "orientation": "landscape"
+    "orientation": "portrait"
   },
   {
     "title": "Power",
@@ -130,7 +130,7 @@
     "path": "/street/s_05.jpg",
     "alttext": "Placeholder text",
     "category": ["street", "bird", "b&W"],
-    "orientation": "landscape"
+    "orientation": "portrait"
   },
   {
     "title": "Take off",
@@ -144,28 +144,28 @@
     "path": "/portrait/p_01.jpg",
     "alttext": "Placeholder text",
     "category": ["portrait", "animal"],
-    "orientation": "landscape"
+    "orientation": "portrait"
   },
   {
     "title": "Conversation",
     "path": "/portrait/p_02.jpg",
     "alttext": "Placeholder text",
     "category": ["portrait", "b&W"],
-    "orientation": "landscape"
+    "orientation": "portrait"
   },
   {
     "title": "Spotted",
     "path": "/portrait/p_03.jpg",
     "alttext": "Placeholder text",
     "category": ["portrait", "b&W"],
-    "orientation": "landscape"
+    "orientation": "portrait"
   },
   {
     "title": "Love",
     "path": "/portrait/p_04.jpg",
     "alttext": "Placeholder text",
     "category": ["portrait", "b&W"],
-    "orientation": "landscape"
+    "orientation": "portrait"
   },
 
   {
@@ -173,6 +173,6 @@
     "path": "/portrait/p_05.jpg",
     "alttext": "Placeholder text",
     "category": ["portrait", "bird"],
-    "orientation": "landscape"
+    "orientation": "portrait"
   }
 ]

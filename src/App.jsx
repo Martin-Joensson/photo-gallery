@@ -1,5 +1,6 @@
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
+import { Modal } from "./components/Modal";
 import { CategoryRoutes } from "./routes/CategoryRoutes";
 
 export const App = () => {

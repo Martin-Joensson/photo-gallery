@@ -1,14 +1,13 @@
-import React from 'react'
-
 export const Home = () => {
-
-
-    let image = "/street/s_03.jpg";
+  let image = "/street/s_03.jpg";
 
   return (
-      <div>
-          <img className="rounded-lg" src={image} alt="Relaxing in the park"/>
-        
+    <div>
+      <img
+        className="rounded-lg max-h-screen"
+        src={image}
+        alt="Relaxing in the park"
+      />
     </div>
-  )
-}
+  );
+};

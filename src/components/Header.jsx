@@ -1,16 +1,14 @@
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faArchway,
   faImagePortrait,
   faMountainSun,
-  faOtter,
   faTreeCity,
+  faCrow,
 } from "@fortawesome/free-solid-svg-icons";
-import { faHornbill } from "@fortawesome/free-brands-svg-icons";
 
 const street = <FontAwesomeIcon icon={faTreeCity} />;
-const wild = <FontAwesomeIcon icon={faOtter} />;
+const wild = <FontAwesomeIcon icon={faCrow} />;
 const hill = <FontAwesomeIcon icon={faMountainSun} />;
 const portrait = <FontAwesomeIcon icon={faImagePortrait} />;
 

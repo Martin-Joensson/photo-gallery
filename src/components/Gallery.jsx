@@ -39,7 +39,7 @@ export const Gallery = () => {
 
   useEffect(() => {
     validCategoryCheck();
-  }, [validCategoryCheck, category]);
+  }, [category]);
 
   return (
     <div>
