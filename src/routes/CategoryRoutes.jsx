@@ -10,7 +10,6 @@ import { Home } from "../pages/Home";
 
 export const CategoryRoutes = () => {
   let { category } = useParams();
-  console.log(category);
 
   return (
     <Routes>

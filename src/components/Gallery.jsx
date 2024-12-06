@@ -3,12 +3,8 @@ import { useState, useEffect } from "react";
 import { CapitalizeFirstLetter } from "./CapitalizeFirstLetter";
 import { PhotoCard } from "./PhotoCard";
 import images from "../assets/images.json";
+import { NotFound } from "../pages/NotFound";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCameraRetro } from "@fortawesome/free-solid-svg-icons";
-
-const camera = <FontAwesomeIcon icon={faCameraRetro} />;
-const arch = <FontAwesomeIcon icon="fa-solid fa-archway" />;
 
 export const Gallery = () => {
   let { category } = useParams();
@@ -32,7 +28,7 @@ export const Gallery = () => {
   const checkCategory = (image, index) => {
     if (image.category.includes(category)) {
       return <PhotoCard image={image} key={index} />;
-    } 
+    }
   };
   // Return images that correspond to chosen category.
   // Get gallery information fråm JSON?
@@ -50,18 +46,13 @@ export const Gallery = () => {
             <h3 className="mt-2 text-3xl">{galleryTitle} Gallery</h3>
           </div>
           <div className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-4">
-            {images.map((image, index) => (
-              checkCategory(image, index)
-            ))}
+            {images.map((image, index) => checkCategory(image, index))}
           </div>
         </div>
       ) : (
-        <div className="font-headerFont">
-          <h3 className="my-6 text-3xl">Not a valid category</h3>
-          <p className="text-xl">Choose a category above.</p>
-          <p className="my-10 text-9xl">{camera}</p>
-          
-        </div>
+        <>
+          <NotFound />
+        </>
       )}
     </div>
     // Map over all images and place in grid. change grid size responsively
