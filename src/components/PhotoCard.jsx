@@ -1,23 +1,22 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Modal } from "./Modal";
 
 export const PhotoCard = ({ image, index }) => {
   const [visible, setVisible] = useState(false);
-  console.log("PhotoCard input:", image);
 
   const handleClick = () => {
     setVisible(!visible);
   };
 
-  // Send setVisible to Modal 
-  // Right now you need to press twice to open the same image a second time.
+
   return (
     <>
       <Modal
-        shown={visible}
         image={image.path}
         alttext={image.alttext}
         title={image.title}
+        visible={visible}
+        setVisible={setVisible}
       />
       <div key={index} className="border border-gray-600 m-4 p-4">
         <img

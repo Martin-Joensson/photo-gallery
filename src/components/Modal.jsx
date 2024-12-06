@@ -1,16 +1,8 @@
-import { useState, useEffect } from "react";
-
-export const Modal = ({ image, alttext, title, shown }) => {
-  const [visible, setVisible] = useState(true);
-
-  useEffect(() => {
-    if (shown) setVisible(true);
-    else setVisible(false);
-  }, [shown]);
-  //Get image and display as modal.
-
+export const Modal = ({ image, alttext, title, visible, setVisible }) => {
   const handleClick = () => {
-    setVisible(!visible);
+    if (visible) {
+      setVisible(!visible);
+    }
   };
 
   return (
