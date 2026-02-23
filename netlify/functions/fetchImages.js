@@ -1,4 +1,5 @@
 import cloudinary from "./cloudinary.js";
+console.log("Cloudinary object:", cloudinary);
 
 export async function handler(event) {
   const tag = event.queryStringParameters?.tag;
