@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
 export const Upload = () => {
-  const token = localStorage.getItem("jwtToken");
   const [file, setFile] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
   const [folder, setFolder] = useState("");
@@ -15,6 +14,8 @@ export const Upload = () => {
 
   /** Fetch folders and tags from Netlify Functions */
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     // Fetch existing tags
     fetch("/.netlify/functions/tags")
       .then((res) => res.json())
@@ -66,12 +67,22 @@ export const Upload = () => {
     const finalFolder = folder.trim() || "Photographs/uploads";
 
     try {
+      // ✅ Only access localStorage in the browser
+      const token =
+        typeof window !== "undefined" ? localStorage.getItem("jwtToken") : null;
+
+      if (!token) {
+        alert("You must be logged in to upload");
+        setLoading(false);
+        return;
+      }
+
       // 1️⃣ Request signature from serverless function
       const signRes = await fetch("/.netlify/functions/signUpload", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`, // ✅ include token
+          Authorization: `Bearer ${token}`, // pass JWT
         },
         body: JSON.stringify({
           folder: finalFolder,
@@ -82,6 +93,13 @@ export const Upload = () => {
       });
 
       const signData = await signRes.json();
+
+      if (!signData.cloudName) {
+        alert("Upload failed: invalid server response. Check console.");
+        console.error("signUpload response:", signData);
+        setLoading(false);
+        return;
+      }
 
       // 2️⃣ Create FormData to upload directly to Cloudinary
       const formData = new FormData();
@@ -102,6 +120,12 @@ export const Upload = () => {
 
       const result = await uploadRes.json();
       console.log("Upload result:", result);
+
+      if (result.error) {
+        alert(`Upload failed: ${result.error.message}`);
+      } else {
+        alert("Upload successful!");
+      }
 
       // Reset form
       setFile(null);
@@ -133,7 +157,7 @@ export const Upload = () => {
           </div>
         )}
 
-        {/* File */}
+        {/* File input */}
         <input type="file" onChange={handleFileChange} required />
 
         {/* Caption */}
@@ -202,7 +226,7 @@ export const Upload = () => {
           </div>
         )}
 
-        {/* Submit */}
+        {/* Submit button */}
         {loading ? (
           <p>Uploading...</p>
         ) : (
