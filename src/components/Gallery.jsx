@@ -49,7 +49,7 @@ export const Gallery = () => {
   if (!validCategory) {
     return <NotFound />;
   }
-console.log(images)
+  console.log(images);
   return (
     <div>
       <div className="font-headerFont">
@@ -62,9 +62,11 @@ console.log(images)
         <p>No images found for this category.</p>
       ) : (
         <div className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-4 gap-4">
-          {images.map((image) => (
-            <PhotoCard image={image} key={image.id} />
-          ))}
+          {Array.isArray(images) && images.length > 0 ? (
+            images.map((image) => <PhotoCard image={image} key={image.id} />)
+          ) : (
+            <p>No images found for this category.</p>
+          )}
         </div>
       )}
     </div>
