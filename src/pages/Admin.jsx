@@ -1,21 +1,38 @@
+// Admin.jsx
 import { useState } from "react";
-import { Login } from "./Login";
 import { Upload } from "../components/Upload";
 
 export const Admin = () => {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [password, setPassword] = useState("");
+  const [authenticated, setAuthenticated] = useState(false);
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    if (password === import.meta.env.VITE_ADMIN_PASSWORD) {
+      setAuthenticated(true);
+    } else {
+      alert("Wrong password");
+    }
+  };
+
+  if (!authenticated) {
+    return (
+      <form onSubmit={handleLogin}>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Enter admin password"
+        />
+        <button type="submit">Login</button>
+      </form>
+    );
+  }
+
   return (
     <div>
-      <h2 className="my-4 text-2xl font-headerFont">Admin</h2>
-      {loggedIn ? (
-        <Upload />
-      ) : (
-        <div>
-          <p>Not Logged In</p>{" "}
-          <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
-        </div>
-      )}
-
+      <h1>Admin Panel</h1>
+      <Upload />
     </div>
   );
 };
