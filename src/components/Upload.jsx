@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 export const Upload = () => {
+  const token = localStorage.getItem("jwtToken");
   const [file, setFile] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
   const [folder, setFolder] = useState("");
@@ -68,6 +69,10 @@ export const Upload = () => {
       // 1️⃣ Request signature from serverless function
       const signRes = await fetch("/.netlify/functions/signUpload", {
         method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`, // ✅ include token
+        },
         body: JSON.stringify({
           folder: finalFolder,
           tags: tags.trim(),

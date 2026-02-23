@@ -21,6 +21,7 @@ export async function handler(event) {
 
     // Generate JWT
     const token = jwt.sign({ role: "admin" }, JWT_SECRET, { expiresIn: "2h" });
+    localStorage.setItem("jwtToken", token);
 
     return { statusCode: 200, body: JSON.stringify({ token }) };
   } catch (err) {
