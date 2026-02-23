@@ -1,10 +1,14 @@
-import cloudinary from "./cloudinary.js";
-console.log("Cloudinary object:", cloudinary);
+import { v2 as cloudinary } from "cloudinary";
 
-export async function handler(event) {
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
+
+export async function handler(event, context) {
   const tag = event.queryStringParameters?.tag;
-
-  if (!tag) return { statusCode: 400, body: JSON.stringify([]) };
+  if (!tag) return { statusCode: 400, body: "Missing tag" };
 
   try {
     const result = await cloudinary.search
@@ -14,11 +18,7 @@ export async function handler(event) {
       .max_results(100)
       .execute();
 
-    console.log("Cloudinary result:", JSON.stringify(result, null, 2));
-
-    const resources = result.resources || []; // 🔹 fallback
-
-    const images = resources.map((img) => ({
+    const images = result.resources.map((img) => ({
       id: img.public_id,
       url: img.secure_url,
       caption: img.context?.caption || "",
@@ -27,7 +27,7 @@ export async function handler(event) {
 
     return { statusCode: 200, body: JSON.stringify(images) };
   } catch (err) {
-    console.error(err);
-    return { statusCode: 500, body: JSON.stringify([]) }; // 🔹 always return array
+    console.error("Cloudinary fetchImages error:", err);
+    return { statusCode: 500, body: JSON.stringify({ error: err.message }) };
   }
 }
