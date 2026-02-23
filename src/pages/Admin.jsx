@@ -1,4 +1,3 @@
-// Admin.jsx
 import { useState } from "react";
 import { Upload } from "../components/Upload";
 
@@ -6,12 +5,27 @@ export const Admin = () => {
   const [password, setPassword] = useState("");
   const [authenticated, setAuthenticated] = useState(false);
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    if (password === import.meta.env.VITE_ADMIN_PASSWORD) {
+    try {
+      const res = await fetch("/.netlify/functions/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        return alert(data.error || "Login failed");
+      }
+
+      // Store JWT
+      localStorage.setItem("admin_token", data.token);
       setAuthenticated(true);
-    } else {
-      alert("Wrong password");
+    } catch (err) {
+      console.error(err);
+      alert("Login failed. Check console.");
     }
   };
 
